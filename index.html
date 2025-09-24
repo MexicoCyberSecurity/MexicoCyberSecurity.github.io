@@ -2,10 +2,169 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Mi Página de GitHub Pages</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protocolo Alfa | Seguridad y Hacking Ético</title>
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Variables y configuración general */
+        :root {
+            --color-bg: #0d1117;
+            --color-primary: #1F6FEB;
+            --color-secondary: #00ff73;
+            --color-text: #E6EDF3;
+            --font-main: 'Space Mono', monospace;
+            --font-display: 'Major Mono Display', monospace;
+        }
+
+        /* Estilos base */
+        body {
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            font-family: var(--font-main);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        /* Títulos principales con efecto 'glitch' */
+        .glitch-title {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 5vw, 4rem);
+            text-align: center;
+            color: var(--color-secondary);
+            animation: glitch-anim 2s infinite;
+        }
+
+        @keyframes glitch-anim {
+            0% { text-shadow: 0 0 0; }
+            20% { text-shadow: 2px 2px var(--color-primary); }
+            40% { text-shadow: -2px -2px var(--color-secondary); }
+            60% { text-shadow: 1px -1px var(--color-primary); }
+            80% { text-shadow: -1px 1px var(--color-secondary); }
+            100% { text-shadow: 0 0 0; }
+        }
+
+        /* Sección de contenido */
+        .content-section {
+            background-color: rgba(30, 30, 30, 0.4);
+            border: 1px solid var(--color-primary);
+            padding: 25px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* Diseño de la cuadrícula de elementos */
+        .dynamic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        /* Tarjetas de información */
+        .card {
+            background-color: rgba(30, 30, 30, 0.6);
+            border: 1px solid var(--color-primary);
+            padding: 20px;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0, 255, 115, 0.2);
+        }
+
+        /* Estilos para las imágenes */
+        .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+        
+        /* Sección de repositorios */
+        .repo-list ul {
+            list-style: none;
+            padding: 0;
+        }
+        .repo-list li a {
+            color: var(--color-secondary);
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+            padding: 10px;
+            border: 1px solid var(--color-secondary);
+            margin-bottom: 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .repo-list li a:hover {
+            background-color: rgba(0, 255, 115, 0.1);
+        }
+
+        /* Media Queries para diseño responsive */
+        @media (min-width: 768px) {
+            .container {
+                grid-template-columns: 1fr 2fr;
+            }
+            .content-section {
+                grid-column: 2 / 3;
+            }
+            .repo-list {
+                grid-column: 1 / 2;
+                grid-row: 1 / 2;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>¡Hola, mundo!</h1>
-    <p>Esta es mi primera página web en GitHub Pages.</p>
+    <div class="container">
+        <section class="content-section repo-list">
+            <h2>Acceso a Repositorios</h2>
+            <p>Explora nuestro código y recursos en estas plataformas.</p>
+            <ul>
+                <li><a href="https://github.com/MexicoCyberSecurity/basesDeDatos">Base de datos</a></li>
+            </ul>
+        </section>
+
+        <main class="content-section">
+            <h1 class="glitch-title">Protocolo Alfa</h1>
+            <p>Descifrando el Futuro de la Ciberseguridad.</p>
+            
+            <section class="dynamic-grid">
+                <article class="card">
+                    <img src="https://via.placeholder.com/600x400?text=Seguridad" alt="Representación visual de seguridad informática con código binario.">
+                    <h3>Cifrado Cuántico</h3>
+                    <p>Explora los nuevos paradigmas de la encriptación y su resistencia a los ataques.</p>
+                </article>
+
+                <article class="card">
+                    <img src="https://via.placeholder.com/600x400?text=Hacking+Etico" alt="Ilustración de un hacker ético trabajando en un entorno seguro.">
+                    <h3>Hacking Ético</h3>
+                    <p>Nuestra filosofía y las herramientas que usamos para identificar vulnerabilidades.</p>
+                </article>
+
+                <article class="card">
+                    <img src="https://via.placeholder.com/600x400?text=Inteligencia+Cibernetica" alt="Diagrama de inteligencia cibernética y análisis de amenazas.">
+                    <h3>Análisis de Amenazas</h3>
+                    <p>Metodologías para la detección temprana de ataques y la respuesta a incidentes.</p>
+                </article>
+            </section>
+        </main>
+    </div>
+
 </body>
 </html>
