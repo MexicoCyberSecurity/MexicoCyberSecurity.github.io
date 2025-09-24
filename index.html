@@ -8,10 +8,10 @@
     <style>
         /* Variables y configuración general */
         :root {
-            --color-bg: #0d1117;
+            --color-bg: #E6EDF3;
             --color-primary: #1F6FEB;
-            --color-secondary: #00ff73;
-            --color-text: #E6EDF3;
+            --color-secondary: #008037; /* Verde oscuro para contraste */
+            --color-text: #0d1117;
             --font-main: 'Space Mono', monospace;
             --font-display: 'Major Mono Display', monospace;
         }
@@ -58,7 +58,7 @@
 
         /* Sección de contenido */
         .content-section {
-            background-color: rgba(30, 30, 30, 0.4);
+            background-color: rgba(255, 255, 255, 0.4);
             border: 1px solid var(--color-primary);
             padding: 25px;
             border-radius: 8px;
@@ -76,7 +76,7 @@
 
         /* Tarjetas de información */
         .card {
-            background-color: rgba(30, 30, 30, 0.6);
+            background-color: rgba(255, 255, 255, 0.6);
             border: 1px solid var(--color-primary);
             padding: 20px;
             border-radius: 8px;
@@ -84,7 +84,7 @@
         }
         .card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 4px 15px rgba(0, 255, 115, 0.2);
+            box-shadow: 0 4px 15px rgba(0, 128, 55, 0.2); /* Sombra ajustada al nuevo color */
         }
 
         /* Estilos para las imágenes */
@@ -112,7 +112,7 @@
             transition: background-color 0.3s;
         }
         .repo-list li a:hover {
-            background-color: rgba(0, 255, 115, 0.1);
+            background-color: rgba(0, 128, 55, 0.1); /* Sombra ajustada */
         }
 
         /* Media Queries para diseño responsive */
@@ -136,7 +136,9 @@
             <h2>Acceso a Repositorios</h2>
             <p>Explora nuestro código y recursos en estas plataformas.</p>
             <ul>
-                <li><a href="https://github.com/MexicoCyberSecurity/basesDeDatos">Base de datos</a></li>
+                <li><a href="https://github.com/tu-usuario/repo-1">Repositorio de Hacking Ético</a></li>
+                <li><a href="https://github.com/tu-usuario/repo-2">Protocolos de Seguridad</a></li>
+                <li><a href="https://gitlab.com/tu-usuario/repo-3">Scripts de Auditoría</a></li>
             </ul>
         </section>
 
